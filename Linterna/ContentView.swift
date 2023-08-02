@@ -8,14 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var lamp = false
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+        VStack{
+            ZStack{
+                Color(lamp ? .black : .white)
+                Button(action: {
+                    lamp.toggle()
+                }){
+                    Text("Encender")
+                }
+            }
+        }.edgesIgnoringSafeArea(.all)
     }
 }
 
@@ -24,3 +28,30 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+
+/**
+ 
+ import SwiftUI
+
+ struct ContentView: View {
+     @State var lamp = false
+     var body: some View{
+         
+         ZStack{
+             Color(lamp ? .black : .white)
+             Button(action: {
+                 lamp.toggle()
+             }){
+                 Text("Encender")
+             }
+         }
+     }
+ }
+
+ struct ContentView_Previws: PreviewProvider{
+     static var previews: some View{
+         ContentView()
+     }
+ }
+ */
