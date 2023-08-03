@@ -52,7 +52,7 @@ struct ContentView_Previews: PreviewProvider {
              Button(action: {
                  lamp.toggle()
              }){
-                 Text("Encend")
+                 Text("Encender")
              }
          }
      }
