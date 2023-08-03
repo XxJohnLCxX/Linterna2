@@ -25,7 +25,7 @@ struct ContentView: View {
                     face.toggle()
                 }){
                     Text(face ? "😌" : "😝")
-                        .font(.system(size:200))
+                        .font(.system(size:250))
                 }
             }
         }.edgesIgnoringSafeArea(.all)
@@ -52,7 +52,7 @@ struct ContentView_Previews: PreviewProvider {
              Button(action: {
                  lamp.toggle()
              }){
-                 Text("Encender")
+                 Text("Encend")
              }
          }
      }
